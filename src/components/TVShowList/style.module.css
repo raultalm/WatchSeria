@@ -1,0 +1,55 @@
+.title {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.list:hover {
+    overflow-x: overlay;
+}
+
+.tvShowItem {
+    margin-right: 20px;
+}
+
+.list {
+    display: flex;
+    width: 100vw - 25px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.61);
+    ;
+    scrollbar-base-color: transparent;
+}
+
+.list::-webkit-scrollbar {
+    height: 1px;
+}
+
+.list::-webkit-scrollbar-thumb:horizontal {
+    background: transparent;
+    background: rgba(186, 172, 172, 0.61);
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+    .list {
+        overflow-x: hidden;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
