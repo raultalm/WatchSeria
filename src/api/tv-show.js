@@ -4,7 +4,7 @@ import { BASE_URL } from "../config";
 export class TVShowAPI {
     static async fetchPopulars() {
         // perform request
-        const response = await axios.get(`${BASE_URL}tv/popular?api_key=${process.env.REACT_APP_API_KEY_PARAM}`);
+        const response = await axios.get(`${BASE_URL}tv/popular?api_key=${process.env.REACT_APP_API_KEY_PARAM}&page=${Math.floor(Math.random() * 499)}`);
 
         // return the response
         return response.data.results;

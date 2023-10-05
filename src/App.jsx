@@ -54,7 +54,7 @@ export function App() {
         try {
             const recommendationListResp = await TVShowAPI.fetchRecommendations(tvShowId);
             if (recommendationListResp && recommendationListResp.length > 0) {
-                setRecommendationList(recommendationListResp.slice(0, 10));
+                setRecommendationList(recommendationListResp);
             } else if (recommendationListResp && recommendationListResp.length <= 0 &&
                 backupRecommendationId && tvShowId !== backupRecommendationId && retryCount < 2) {
                 fetchRecommendations(backupRecommendationId, retryCount + 1);
